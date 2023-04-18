@@ -1,13 +1,16 @@
 @using IgniteUI.Blazor.Controls
 
 <div class="container sample center">
-    <IgbCombo Data="Data" ValueKey="Id" DisplayKey="Name"></IgbCombo>
+    <!-- <IgbCombo Data="Data" ValueKey="Id" DisplayKey="Name"></IgbCombo> -->
+    <IgbCombo Id="basic-combo" Data="lstAppEnvironments" Width="100%" />
 </div>
 
 @code {
-    private List<City> Data;
+    // private List<City> Data; 
+    private List<string> lstAppEnvironments = new();
 
     protected override void OnInitialized() {
-        this.Data = SampleData.Cities;
+        //this.Data = SampleData.Cities;
+        lstAppEnvironments.Add("Item 1");
     }
 }
